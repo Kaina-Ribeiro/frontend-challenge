@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from '../Button';
 
 export const Container = styled.div`
   display: flex;
@@ -27,4 +28,9 @@ export const TitlesWrapper = styled.ul`
 
   gap: 1.5rem;
   color: ${({ theme }) => theme.COLORS.textBase};
+`;
+
+export const ButtonHeader = styled(Button)`
+  width: 100px;
+  padding: 8px 16px;
 `;

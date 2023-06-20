@@ -3,13 +3,12 @@ import type { NextPageWithLayout } from './_app';
 
 import { ReactElement } from 'react';
 
-import Header from '@/components/Header';
+import FirstBlockContent from '@/components/FirstBlockContent';
 
 const Home: NextPageWithLayout = () => {
   return (
     <div>
-      <Header />
-      <h1>Hello World</h1>
+      <FirstBlockContent />
     </div>
   );
 };

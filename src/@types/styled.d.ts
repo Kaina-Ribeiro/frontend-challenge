@@ -7,7 +7,6 @@ declare module 'styled-components' {
   export interface DefaultTheme extends ThemeType {
     COLORS: {
       primary: {
-        default: string;
         orange100: string;
         orange200: string;
         orange300: string;
@@ -19,7 +18,6 @@ declare module 'styled-components' {
         orange900: string;
       };
       secondary: {
-        default: string;
         gray100: string;
         gray200: string;
         gray300: string;
@@ -31,7 +29,6 @@ declare module 'styled-components' {
         gray900: string;
       };
       tertiary: {
-        default: string;
         green100: string;
         green200: string;
         green300: string;
@@ -43,7 +40,6 @@ declare module 'styled-components' {
         green900: string;
       };
       quartenary: {
-        default: string;
         red100: string;
         red200: string;
         red300: string;

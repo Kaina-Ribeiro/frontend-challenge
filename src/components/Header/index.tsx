@@ -1,14 +1,22 @@
 import logoImg from '../../assets/logo.svg';
-import { Container, LeftContentWrapper, RightContentWrapper, TitlesWrapper } from './styles';
+
 import Link from 'next/link';
-import { Button } from '../Button';
+
 import Image from 'next/image';
+import { Button } from '../Button';
+import {
+  ButtonHeader,
+  Container,
+  LeftContentWrapper,
+  RightContentWrapper,
+  TitlesWrapper,
+} from './styles';
 
 const Header = () => {
   return (
     <Container>
       <LeftContentWrapper>
-        <Image src={logoImg} alt="logo"></Image>
+        <Image src={logoImg} alt="logo" />
 
         <TitlesWrapper>
           <li>
@@ -39,7 +47,7 @@ const Header = () => {
             <Button title={'Sign In'} color="WHITE" />
           </li>
           <li>
-            <Button title={'Sign Up'} color="PRIMARY" />
+            <ButtonHeader title={'Sign Up'} color="PRIMARY" />
           </li>
         </TitlesWrapper>
       </RightContentWrapper>
