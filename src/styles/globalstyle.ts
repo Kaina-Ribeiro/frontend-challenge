@@ -43,48 +43,48 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: ${({ theme }) => theme.FONT_SIZE.XXXL};
+    font-size: ${({ theme }) => theme.FONT_SIZE.XXXL}px;
     line-height: 56px;
     letter-spacing: -1px;
   }
 
   h2 {
-    font-size: ${({ theme }) => theme.FONT_SIZE.XXL};
+    font-size: ${({ theme }) => theme.FONT_SIZE.XXL}px;
     line-height: 48px;
     letter-spacing: -1px;
   }
 
   h3 {
-    font-size: ${({ theme }) => theme.FONT_SIZE.XL};
+    font-size: ${({ theme }) => theme.FONT_SIZE.XL}px;
     line-height: 40px;
     letter-spacing: 0;
   }
 
   h4 {
-    font-size: ${({ theme }) => theme.FONT_SIZE.L};
+    font-size: ${({ theme }) => theme.FONT_SIZE.L}px;
     line-height: 32px;
     letter-spacing: 0;
   }
   h5 {
-    font-size: ${({ theme }) => theme.FONT_SIZE.MD};
+    font-size: ${({ theme }) => theme.FONT_SIZE.MD}px;
     line-height: 24px;
     letter-spacing: 0;
   }
 
   p {
-    font-size: ${({ theme }) => theme.FONT_SIZE.SM};
+    font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
     line-height: 24px;
     letter-spacing: 0;
   }
 
   label {
-    font-size: ${({ theme }) => theme.FONT_SIZE.XSM};
+    font-size: ${({ theme }) => theme.FONT_SIZE.XSM}px;
     line-height: 16px;
     letter-spacing: 0;
   }
 
   small {
-    font-size: ${({ theme }) => theme.FONT_SIZE.XXSM};
+    font-size: ${({ theme }) => theme.FONT_SIZE.XXSM}px;
     line-height: 14px;
     letter-spacing: 0;
   }
