@@ -1,8 +1,7 @@
 import SignUpNow from '../SignUpNow';
 import EmblaCarousel from '../EmblaCarousel';
 import { EmblaOptionsType } from 'embla-carousel-react';
-import { CarouselContainer, Container, WavesImg } from './styles';
-import { CaroulselSection } from '../Layout/styled';
+import { Container, WavesImg, CaroulselSection } from './styles';
 
 import waves from '../../assets/test.svg';
 const OPTIONS: EmblaOptionsType = { inViewThreshold: 1 };
@@ -16,9 +15,9 @@ const FirstBlockContent = () => {
       <CaroulselSection>
         <SignUpNow />
 
-        <CarouselContainer>
+        <div>
           <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-        </CarouselContainer>
+        </div>
       </CaroulselSection>
 
       <WavesImg src={waves} alt="waves" />

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -7,8 +6,5 @@ export const Container = styled.div`
   justify-content: space-between;
   padding: 24px 112px;
   box-shadow: 0px -4px 8px rgba(77, 77, 77, 0.1);
+  background: ${({ theme }) => theme.COLORS.white};
 `;
-
-export const CopyrightText = styled.label``;
-
-export const CopyrightImage = styled(Image)``;

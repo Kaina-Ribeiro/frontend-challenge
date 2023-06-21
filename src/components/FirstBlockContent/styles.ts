@@ -7,9 +7,16 @@ export const Container = styled.section`
   width: 100%;
 `;
 
-export const CarouselContainer = styled.div``;
-
 export const WavesImg = styled(Image)`
   max-width: 100%;
   width: 100%;
+`;
+
+export const CaroulselSection = styled.section`
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-left: 112px;
 `;
