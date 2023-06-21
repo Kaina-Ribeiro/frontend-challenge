@@ -2,11 +2,11 @@ import { Container } from './styles';
 import copyrightLogo from '../../assets/copyrightLogo.svg';
 import Image from 'next/image';
 
-const FooterCopyright = () => {
+const FooterCopyright = ({ logo = false }) => {
   return (
-    <Container>
+    <Container logo={logo}>
       <label>Copyright 2022 - All rights reserved</label>
-      <Image src={copyrightLogo} alt="copy-logo" />
+      {logo && <Image src={copyrightLogo} alt="copy-logo" />}
     </Container>
   );
 };

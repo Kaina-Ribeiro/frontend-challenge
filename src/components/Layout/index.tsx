@@ -13,7 +13,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Header />
 
       {children}
-      <FooterCopyright />
+      <FooterCopyright logo={true} />
     </MainContainer>
   );
 };

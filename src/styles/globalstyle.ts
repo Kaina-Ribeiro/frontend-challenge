@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
 
   html,
   body,
-  #root {
+  #next {
     height: 100%;
   }
 

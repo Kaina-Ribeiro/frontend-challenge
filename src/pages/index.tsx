@@ -8,6 +8,7 @@ import SecondBlockContent from '@/components/SecondBlockContent';
 import ThirdBlockContent from '@/components/ThirdBlockContent';
 
 import NewsLetter from '@/components/NewsLetter';
+import Head from 'next/head';
 
 const Home: NextPageWithLayout = () => {
   return (
@@ -21,7 +22,14 @@ const Home: NextPageWithLayout = () => {
 };
 
 Home.getLayout = (page: ReactElement) => {
-  return <Layout>{page}</Layout>;
+  return (
+    <>
+      <Head>
+        <title>Home</title>
+      </Head>
+      <Layout>{page}</Layout>
+    </>
+  );
 };
 
 export default Home;

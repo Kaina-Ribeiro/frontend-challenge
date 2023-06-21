@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
 import Header from '../Header';
-import { MainContainer } from './styled';
+import { ContentWrapper, MainContainer } from './styled';
 import FooterCopyright from '../FooterCopyright';
+import SideNav from '../SideNav';
 
 type LayoutDashboardProps = {
   children: ReactNode;
@@ -11,8 +12,10 @@ const LayoutDashboard = ({ children }: LayoutDashboardProps) => {
   return (
     <MainContainer>
       <Header />
-
-      {children}
+      <ContentWrapper>
+        <SideNav />
+        {children}
+      </ContentWrapper>
       <FooterCopyright />
     </MainContainer>
   );

@@ -1,56 +1,19 @@
-import logoImg from '../../assets/logo.svg';
-
-import Link from 'next/link';
+import cryptoWallet from '../../assets/cardsIcons/cryptoWallet.svg';
+import crypto from '../../assets/cardsIcons/cryptoIcon1.svg';
+import crypto2 from '../../assets/cardsIcons/cryptoIcon2.svg';
+import business from '../../assets/cardsIcons/business.svg';
 
 import Image from 'next/image';
-import { Button } from '../Button';
-import {
-  ButtonHeader,
-  Container,
-  LeftContentWrapper,
-  RightContentWrapper,
-  TitlesWrapper,
-} from './styles';
+
+import { Container } from './styles';
 
 const SideNav = () => {
   return (
     <Container>
-      <LeftContentWrapper>
-        <Image src={logoImg} alt="logo" />
-
-        <TitlesWrapper>
-          <li>
-            <Link href="/dashboard">About us</Link>
-          </li>
-          <li>
-            <Link href="/dashboard">Top Cryptos</Link>
-          </li>
-        </TitlesWrapper>
-      </LeftContentWrapper>
-
-      <RightContentWrapper>
-        <TitlesWrapper>
-          <li>
-            <label>
-              BIT R$ 23,62 <span style={{ color: 'green' }}>+7,082</span>
-            </label>
-          </li>
-          <li>
-            <label>
-              DOG R$ 23,62 <span style={{ color: 'red' }}>-5,230</span>
-            </label>
-          </li>
-        </TitlesWrapper>
-
-        <TitlesWrapper>
-          <li>
-            <Button title={'Sign In'} color="WHITE" />
-          </li>
-          <li>
-            <ButtonHeader title={'Sign Up'} color="PRIMARY" />
-          </li>
-        </TitlesWrapper>
-      </RightContentWrapper>
+      <Image src={cryptoWallet} width={32} height={32} alt="cryptoWallet" />
+      <Image src={crypto2} width={32} height={32} alt="crypto2 logo" />
+      <Image src={crypto} width={32} height={32} alt="crypto logo" />
+      <Image src={business} width={32} height={32} alt="business logo" />
     </Container>
   );
 };

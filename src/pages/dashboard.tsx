@@ -3,22 +3,27 @@ import type { NextPageWithLayout } from './_app';
 import { ReactElement } from 'react';
 
 import LayoutDashboard from '@/components/LayoutDashboard';
-import MoneyBalanceCard from '@/components/MoneyBalanceCard';
-import DailyVariationCard from '@/components/DailyVariationCard';
-import NewsCard from '@/components/NewsCard';
+
+import Head from 'next/head';
+import DashboardContent from '@/components/DashboardContent';
 
 const dashboard: NextPageWithLayout = () => {
   return (
-    <div style={{ display: 'flex', gap: '2rem' }}>
-      <MoneyBalanceCard />
-      <DailyVariationCard />
-      <NewsCard />
-    </div>
+    <>
+      <DashboardContent />
+    </>
   );
 };
 
 dashboard.getLayout = (page: ReactElement) => {
-  return <LayoutDashboard>{page}</LayoutDashboard>;
+  return (
+    <>
+      <Head>
+        <title>Dashboard</title>
+      </Head>
+      <LayoutDashboard>{page}</LayoutDashboard>
+    </>
+  );
 };
 
 export default dashboard;
