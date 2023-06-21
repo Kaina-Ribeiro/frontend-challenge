@@ -7,12 +7,15 @@ import FirstBlockContent from '@/components/FirstBlockContent';
 import SecondBlockContent from '@/components/SecondBlockContent';
 import ThirdBlockContent from '@/components/ThirdBlockContent';
 
+import NewsLetter from '@/components/NewsLetter';
+
 const Home: NextPageWithLayout = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <FirstBlockContent />
       <SecondBlockContent />
       <ThirdBlockContent />
+      <NewsLetter />
     </div>
   );
 };

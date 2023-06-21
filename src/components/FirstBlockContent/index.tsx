@@ -7,7 +7,7 @@ import { CaroulselSection } from '../Layout/styled';
 import waves from '../../assets/test.svg';
 const OPTIONS: EmblaOptionsType = { inViewThreshold: 1 };
 
-const SLIDE_COUNT = 2;
+const SLIDE_COUNT = 3;
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 
 const FirstBlockContent = () => {

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   .embla {
     --slide-spacing: 1rem;
-    --slide-size: 50%;
+    --slide-size: 35%;
     --slide-height: 19rem;
     padding: 1.6rem;
   }
