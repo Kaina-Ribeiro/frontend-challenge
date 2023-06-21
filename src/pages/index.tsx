@@ -4,11 +4,13 @@ import type { NextPageWithLayout } from './_app';
 import { ReactElement } from 'react';
 
 import FirstBlockContent from '@/components/FirstBlockContent';
+import SecondBlockContent from '@/components/SecondBlockContent';
 
 const Home: NextPageWithLayout = () => {
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
       <FirstBlockContent />
+      <SecondBlockContent />
     </div>
   );
 };
