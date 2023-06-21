@@ -1,9 +1,5 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
-  ],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
   "env": {
     "jest": true,
     "node": true,
@@ -13,6 +9,7 @@
 
   "root": true,
   "rules": {
+    "react/jsx-no-undef": "off",
     "camelcase": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",

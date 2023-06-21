@@ -5,12 +5,14 @@ import { ReactElement } from 'react';
 
 import FirstBlockContent from '@/components/FirstBlockContent';
 import SecondBlockContent from '@/components/SecondBlockContent';
+import ThirdBlockContent from '@/components/ThirdBlockContent';
 
 const Home: NextPageWithLayout = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <FirstBlockContent />
       <SecondBlockContent />
+      <ThirdBlockContent />
     </div>
   );
 };
