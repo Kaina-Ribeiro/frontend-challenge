@@ -51,7 +51,8 @@ export const defaultTheme = {
 
   breakpoints: {
     sm: '320',
-    md: '768',
+    md: '600',
+    tablet: '768',
     lg: '1080',
     xl: '1440',
   },

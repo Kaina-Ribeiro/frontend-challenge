@@ -20,7 +20,7 @@ export const Scroll = styled.div`
   gap: 24px;
   width: 100%;
   animation: ${scroll} 30s linear infinite;
-  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     p,
     span {
       font-size: ${({ theme }) => theme.font_size.XXSM}px;

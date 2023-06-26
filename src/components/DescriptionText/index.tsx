@@ -1,10 +1,17 @@
-import { ButtonStyled, ButtonText, Container, Description, TitleDescription } from './styles';
+import {
+  ButtonStyled,
+  ButtonText,
+  Container,
+  Description,
+  Title,
+  TitleDescription,
+} from './styles';
 
 const DescriptionText = () => {
   return (
     <Container>
       <TitleDescription>Lorem ipsum</TitleDescription>
-      <h2>Lorem ipsum</h2>
+      <Title>Lorem ipsum</Title>
 
       <Description>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus

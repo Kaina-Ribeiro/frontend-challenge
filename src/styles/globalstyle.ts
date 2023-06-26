@@ -90,6 +90,26 @@ const GlobalStyle = createGlobalStyle`
   }
 
 
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-wrapper {
+    gap: 60px;
+  }
+
+  .swiper-slide {
+    width: 60%;
+  }
+
+  .swiper-slide:nth-child(2n) {
+    width: 40%;
+  }
+
+  .swiper-slide:nth-child(3n) {
+    width: 20%;
+  }
 
 `;
 

@@ -4,6 +4,10 @@ export const Container = styled.div`
   max-width: 384px;
   width: 100%;
   z-index: 1;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    max-width: 320px;
+  }
 `;
 
 export const LabelInput = styled.div`

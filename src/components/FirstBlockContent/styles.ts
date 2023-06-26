@@ -12,11 +12,16 @@ export const WavesImg = styled(Image)`
   width: 100%;
 `;
 
-export const CaroulselSection = styled.section`
+export const CarouselSection = styled.section`
   display: flex;
-  overflow: hidden;
-  width: 100%;
-  justify-content: space-between;
+
   padding-top: 100px;
-  padding-left: 112px;
+  padding-left: 48px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    padding-top: 60px;
+  }
+  transition: padding 0.2s;
 `;
+
+export const CarouselWrapper = styled.div``;

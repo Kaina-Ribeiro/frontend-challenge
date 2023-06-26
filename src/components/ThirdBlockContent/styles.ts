@@ -8,6 +8,15 @@ export const Container = styled.section`
   gap: 32px;
   width: 100%;
   padding: 120px 112px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
+    padding: 120px 80px;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    padding: 80px 48px;
+  }
+  transition: padding 0.2s;
 `;
 
 export const Table = styled.table`
