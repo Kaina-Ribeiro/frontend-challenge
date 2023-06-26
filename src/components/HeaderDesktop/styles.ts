@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Button } from '../Button';
 
 export const Container = styled.div`
   display: flex;
@@ -8,8 +7,15 @@ export const Container = styled.div`
   width: 100%;
   height: 64px;
   padding: 0 112px;
-  background: ${({ theme }) => theme.COLORS.white};
+
+  background: ${({ theme }) => theme.colors.white};
   box-shadow: 0px 4px 8px rgba(77, 77, 77, 0.1);
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
+    padding: 0 48px;
+  }
+
+  transition: all 0.2s;
 `;
 
 export const LeftContentWrapper = styled.div`
@@ -26,11 +32,20 @@ export const TitlesWrapper = styled.ul`
   display: flex;
   align-items: center;
 
-  gap: 1.5rem;
-  color: ${({ theme }) => theme.COLORS.textBase};
+  color: ${({ theme }) => theme.colors.textBase};
 `;
 
-export const ButtonHeader = styled(Button)`
-  width: 100px;
-  padding: 8px 16px;
+export const HeaderButtons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
+    padding: 0 48px;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  max-width: 100px;
+  height: 32px;
 `;

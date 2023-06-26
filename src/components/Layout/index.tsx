@@ -1,7 +1,8 @@
 import { ReactNode } from 'react';
-import Header from '../Header';
+
 import { MainContainer } from './styled';
 import FooterCopyright from '../FooterCopyright';
+import HeaderDesktop from '../HeaderDesktop';
 
 type LayoutProps = {
   children: ReactNode;
@@ -10,7 +11,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <MainContainer>
-      <Header />
+      <HeaderDesktop />
 
       {children}
       <FooterCopyright logo={true} />

@@ -11,7 +11,7 @@ export const Container = styled.div`
   border-radius: 8px;
 
   padding: 24px 0 24px 24px;
-  background: ${({ theme }) => theme.COLORS.white};
+  background: ${({ theme }) => theme.colors.white};
 `;
 
 export const BalanceInfoWrapper = styled.div`
@@ -26,7 +26,7 @@ export const ImageWrapper = styled.div`
   height: 64px;
   padding: 12px;
   border-radius: 50%;
-  background-color: ${({ theme }) => theme.COLORS.primary.orange100};
+  background-color: ${({ theme }) => theme.colors.primary.orange100};
 `;
 
 export const MoneyInfoWrapper = styled.div``;
@@ -40,7 +40,7 @@ export const TotalValue = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.COLORS.primary.orange100};
+  background-color: ${({ theme }) => theme.colors.primary.orange100};
   padding: 36px 0 36px 0;
 `;
 

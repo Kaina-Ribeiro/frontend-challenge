@@ -5,11 +5,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '../Button';
 import {
-  ButtonHeader,
   Container,
   LeftContentWrapper,
   RightContentWrapper,
   TitlesWrapper,
+  HeaderButtons,
+  ButtonWrapper,
 } from './styles';
 import { useState } from 'react';
 import Profile from '../Profile';
@@ -17,10 +18,11 @@ import ConfirmationModal from '../ConfirmationModal';
 import SignIn from '../SignIn';
 import SignUp from '../SignUp';
 
-const Header = () => {
+const HeaderDesktop = () => {
   const [logged, setLogged] = useState(false);
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+
   return (
     <Container>
       <LeftContentWrapper>
@@ -53,22 +55,22 @@ const Header = () => {
             </li>
           </TitlesWrapper>
 
-          <TitlesWrapper>
-            <li>
+          <HeaderButtons>
+            <ButtonWrapper>
               <Button
                 title={'Sign In'}
                 onClick={() => setSignInModal(!signInModal)}
                 color="WHITE"
               />
-            </li>
-            <li>
-              <ButtonHeader
+            </ButtonWrapper>
+            <ButtonWrapper>
+              <Button
                 title={'Sign Up'}
                 onClick={() => setSignUpModal(!signUpModal)}
                 color="PRIMARY"
               />
-            </li>
-          </TitlesWrapper>
+            </ButtonWrapper>
+          </HeaderButtons>
         </RightContentWrapper>
       )}
       {logged && <Profile onClick={() => setLogged((l) => !l)} />}
@@ -98,4 +100,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderDesktop;

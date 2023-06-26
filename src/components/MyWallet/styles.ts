@@ -6,7 +6,7 @@ export const Container = styled.div`
   max-width: 1216px;
   width: 100%;
   height: 389px;
-  background: ${({ theme }) => theme.COLORS.white};
+  background: ${({ theme }) => theme.colors.white};
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin: 5rem 0;
@@ -17,7 +17,7 @@ export const CardHeader = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 24px;
-  border-bottom: 1px solid ${({ theme }) => theme.COLORS.secondary.gray200};
+  border-bottom: 1px solid ${({ theme }) => theme.colors.secondary.gray200};
 `;
 
 export const TitleWrapper = styled.div`
@@ -33,14 +33,14 @@ export const AddCryptoButton = styled.button`
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: ${({ theme }) => theme.COLORS.primary.orange500};
+  background: ${({ theme }) => theme.colors.primary.orange500};
   border-radius: 32px;
   cursor: pointer;
 
   & > span {
-    font-size: ${({ theme }) => theme.FONT_SIZE.XSM}px;
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
     line-height: 16px;
-    color: ${({ theme }) => theme.COLORS.white};
+    color: ${({ theme }) => theme.colors.white};
   }
 `;
 

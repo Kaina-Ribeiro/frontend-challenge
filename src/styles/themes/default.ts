@@ -1,5 +1,5 @@
 export const defaultTheme = {
-  COLORS: {
+  colors: {
     primary: {
       orange100: '#FFF6E8',
       orange200: '#FFE1B5',
@@ -49,7 +49,14 @@ export const defaultTheme = {
     textBase: '#5D6670',
   },
 
-  FONT_SIZE: {
+  breakpoints: {
+    sm: 320,
+    md: 768,
+    lg: 1080,
+    xl: 1440,
+  },
+
+  font_size: {
     XXSM: 12,
     XSM: 14,
     SM: 16,

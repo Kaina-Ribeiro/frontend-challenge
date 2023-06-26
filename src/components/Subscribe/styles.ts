@@ -14,16 +14,16 @@ export const LabelInput = styled.div`
 `;
 
 export const LabelSubscribe = styled.label`
-  color: ${({ theme }) => theme.COLORS.white};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const InputSubscribe = styled.input`
   padding: 16px;
   width: 100%;
   border-radius: 6px;
-  color: ${({ theme }) => theme.COLORS.textBase};
+  color: ${({ theme }) => theme.colors.textBase};
   &::placeholder {
-    color: ${({ theme }) => theme.COLORS.secondary.gray400};
+    color: ${({ theme }) => theme.colors.secondary.gray400};
   }
 `;
 
@@ -35,13 +35,13 @@ export const SubscribeButton = styled.button`
   height: 48px;
   box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.1);
   border-radius: 32px;
-  background-color: ${({ theme }) => theme.COLORS.primary.orange500};
+  background-color: ${({ theme }) => theme.colors.primary.orange500};
   cursor: pointer;
 `;
 
 export const SubscribeButtonText = styled.span`
-  color: ${({ theme }) => theme.COLORS.white};
-  font-size: ${({ theme }) => theme.FONT_SIZE.SM}px;
-  color: ${({ theme }) => theme.COLORS.white};
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.font_size.SM}px;
+  color: ${({ theme }) => theme.colors.white};
   line-height: 24px;
 `;

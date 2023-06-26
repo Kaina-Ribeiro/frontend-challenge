@@ -5,7 +5,7 @@ type ThemeType = typeof defaultTheme;
 
 declare module 'styled-components' {
   export interface DefaultTheme extends ThemeType {
-    COLORS: {
+    colors: {
       primary: {
         orange100: string;
         orange200: string;
@@ -55,7 +55,7 @@ declare module 'styled-components' {
       textBase: string;
     };
 
-    FONT_SIZE: {
+    font_size: {
       XXSM: number;
       XSM: number;
       SM: number;

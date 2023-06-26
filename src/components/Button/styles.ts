@@ -9,6 +9,7 @@ export const Container = styled.button<ButtonProps>`
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   padding: 14px 24px;
 
   ${({ theme, color }) =>
@@ -18,10 +19,10 @@ export const Container = styled.button<ButtonProps>`
           align-items: center;
 
           border-radius: 32px;
-          background-color: ${theme.COLORS.primary.orange500};
+          background-color: ${theme.colors.primary.orange500};
         `
       : css`
-          background-color: ${theme.COLORS.white};
+          background-color: ${theme.colors.white};
           border-radius: 0px;
         `};
 
@@ -29,8 +30,8 @@ export const Container = styled.button<ButtonProps>`
 
   p {
     color: ${({ theme, color }) =>
-      color === 'PRIMARY' ? theme.COLORS.white : theme.COLORS.textBase};
-    font-size: ${({ theme }) => theme.FONT_SIZE.XSM}px;
+      color === 'PRIMARY' ? theme.colors.white : theme.colors.textBase};
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
     line-height: 16px;
     white-space: nowrap;
   }

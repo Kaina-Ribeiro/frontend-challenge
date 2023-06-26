@@ -12,11 +12,11 @@ export const Title = styled.h4`
   font-weight: normal;
 
   span:first-child {
-    color: ${({ theme }) => theme.COLORS.primary.orange500};
+    color: ${({ theme }) => theme.colors.primary.orange500};
     font-weight: bold;
   }
   span:last-child {
-    color: ${({ theme }) => theme.COLORS.secondary.gray500};
+    color: ${({ theme }) => theme.colors.secondary.gray500};
     font-weight: bold;
   }
   margin-bottom: 24px;
@@ -50,7 +50,7 @@ export const PasswordWrapper = styled.div`
   & > p {
     margin-top: 9px;
     align-self: flex-end;
-    color: ${({ theme }) => theme.COLORS.secondary.gray500};
+    color: ${({ theme }) => theme.colors.secondary.gray500};
     font-size: 12px;
     line-height: 14px;
     cursor: pointer;
@@ -58,18 +58,18 @@ export const PasswordWrapper = styled.div`
 `;
 
 export const SignUpMessage = styled.p`
-  font-size: ${({ theme }) => theme.FONT_SIZE.XXSM}px;
+  font-size: ${({ theme }) => theme.font_size.XXSM}px;
   line-height: 14px;
 
   span:nth-child(1) {
     font-weight: bold;
   }
   span:nth-child(2) {
-    color: ${({ theme }) => theme.COLORS.primary.orange500};
+    color: ${({ theme }) => theme.colors.primary.orange500};
     font-weight: bold;
   }
   span:nth-child(3) {
-    color: ${({ theme }) => theme.COLORS.secondary.gray500};
+    color: ${({ theme }) => theme.colors.secondary.gray500};
     font-weight: bold;
   }
 `;

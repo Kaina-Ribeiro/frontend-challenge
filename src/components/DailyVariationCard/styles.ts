@@ -11,7 +11,7 @@ export const Container = styled.div`
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 
-  background: ${({ theme }) => theme.COLORS.white};
+  background: ${({ theme }) => theme.colors.white};
 `;
 
 export const VariationWrapper = styled.div`
@@ -23,7 +23,7 @@ export const VariationWrapper = styled.div`
 
 export const Title = styled.small`
   white-space: nowrap;
-  color: ${({ theme }) => theme.COLORS.secondary.gray500};
+  color: ${({ theme }) => theme.colors.secondary.gray500};
 `;
 
 export const CryptoName = styled.div`
@@ -39,5 +39,5 @@ export const GraphImage = styled(Image)`
 `;
 
 export const VariationText = styled.p`
-  color: ${({ theme }) => theme.COLORS.tertiary.green700};
+  color: ${({ theme }) => theme.colors.tertiary.green700};
 `;

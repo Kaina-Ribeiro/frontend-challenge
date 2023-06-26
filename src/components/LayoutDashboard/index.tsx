@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import Header from '../Header';
+import HeaderDesktop from '../HeaderDesktop';
 import { ContentWrapper, MainContainer } from './styled';
 import FooterCopyright from '../FooterCopyright';
 import SideNav from '../SideNav';
@@ -11,7 +11,7 @@ type LayoutDashboardProps = {
 const LayoutDashboard = ({ children }: LayoutDashboardProps) => {
   return (
     <MainContainer>
-      <Header />
+      <HeaderDesktop />
       <ContentWrapper>
         <SideNav />
         {children}

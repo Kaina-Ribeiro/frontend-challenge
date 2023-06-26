@@ -35,7 +35,7 @@ export const ModalContent = styled.div<ModalProps>`
   padding: 24px;
   border-radius: 8px;
 
-  background-color: ${({ theme }) => theme.COLORS.white};
+  background-color: ${({ theme }) => theme.colors.white};
   box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.1);
 `;
 

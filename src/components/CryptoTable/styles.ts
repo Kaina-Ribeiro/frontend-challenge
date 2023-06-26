@@ -11,8 +11,8 @@ export const TableContainer = styled.table`
   }
 
   th {
-    color: ${({ theme }) => theme.COLORS.secondary.gray500};
-    font-size: ${({ theme }) => theme.FONT_SIZE.XSM}px;
+    color: ${({ theme }) => theme.colors.secondary.gray500};
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
     font-weight: 400;
     line-height: 16px;
     padding-bottom: 8px;
@@ -26,8 +26,8 @@ export const TableContainer = styled.table`
     padding-top: 16px;
     padding-bottom: 16px;
 
-    color: ${({ theme }) => theme.COLORS.secondary.gray500};
-    font-size: ${({ theme }) => theme.FONT_SIZE.XSM}px;
+    color: ${({ theme }) => theme.colors.secondary.gray500};
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
     font-weight: 400;
     line-height: 16px;
     &:last-child {
@@ -36,7 +36,7 @@ export const TableContainer = styled.table`
   }
 
   tr:nth-child(even) {
-    background-color: ${({ theme }) => theme.COLORS.secondary.gray100};
+    background-color: ${({ theme }) => theme.colors.secondary.gray100};
   }
 `;
 

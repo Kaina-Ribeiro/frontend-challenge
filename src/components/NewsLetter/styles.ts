@@ -38,16 +38,16 @@ export const FooterDescription = styled.div`
 `;
 
 export const TitleDescription = styled.h4`
-  color: ${({ theme }) => theme.COLORS.primary.orange200};
+  color: ${({ theme }) => theme.colors.primary.orange200};
   margin-bottom: 4px;
 `;
 
 export const Title = styled.h2`
-  color: ${({ theme }) => theme.COLORS.white};
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Description = styled.p`
-  color: ${({ theme }) => theme.COLORS.white};
+  color: ${({ theme }) => theme.colors.white};
 
   max-width: 405px;
   width: 100%;

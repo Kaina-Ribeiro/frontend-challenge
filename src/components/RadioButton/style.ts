@@ -27,8 +27,8 @@ export const Container = styled.label`
     height: 16px;
     width: 16px;
 
-    border: 1px solid ${({ theme }) => theme.COLORS.primary.orange500};
-    background: ${({ theme }) => theme.COLORS.white};
+    border: 1px solid ${({ theme }) => theme.colors.primary.orange500};
+    background: ${({ theme }) => theme.colors.white};
     border-radius: 4px;
 
     &::after {
@@ -44,7 +44,7 @@ export const Container = styled.label`
 
   /* Add a background when is checked */
   & input:checked ~ .checkmark {
-    background-color: ${({ theme }) => theme.COLORS.secondary.gray500};
+    background-color: ${({ theme }) => theme.colors.secondary.gray500};
   }
 
   /* Show the checkmark when checked */

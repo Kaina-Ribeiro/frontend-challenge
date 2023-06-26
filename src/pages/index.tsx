@@ -3,22 +3,11 @@ import type { NextPageWithLayout } from './_app';
 
 import { ReactElement } from 'react';
 
-import FirstBlockContent from '@/components/FirstBlockContent';
-import SecondBlockContent from '@/components/SecondBlockContent';
-import ThirdBlockContent from '@/components/ThirdBlockContent';
-
-import NewsLetter from '@/components/NewsLetter';
 import Head from 'next/head';
+import HomeContent from '@/components/HomeContent';
 
 const Home: NextPageWithLayout = () => {
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column' }}>
-      <FirstBlockContent />
-      <SecondBlockContent />
-      <ThirdBlockContent />
-      <NewsLetter />
-    </div>
-  );
+  return <HomeContent />;
 };
 
 Home.getLayout = (page: ReactElement) => {

@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 
 export const TitleDescription = styled.h5`
-  color: ${({ theme }) => theme.COLORS.primary.orange500};
+  color: ${({ theme }) => theme.colors.primary.orange500};
   line-height: 32px;
   margin-bottom: 4px;
 `;
@@ -30,7 +30,7 @@ export const ButtonStyled = styled.button`
       height: 48px;
       padding: 14px 24px;
       border-radius: 32px;
-      background-color: ${theme.COLORS.primary.orange500};
+      background-color: ${theme.colors.primary.orange500};
       cursor: pointer;
     `};
 `;
@@ -38,8 +38,8 @@ export const ButtonStyled = styled.button`
 export const ButtonText = styled.span`
   ${({ theme }) =>
     css`
-      color: ${theme.COLORS.white};
-      font-size: ${theme.FONT_SIZE.SM};
+      color: ${theme.colors.white};
+      font-size: ${theme.font_size.SM};
       line-height: 24px;
     `};
 `;

@@ -11,7 +11,7 @@ export const Container = styled.div`
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 
-  background: ${({ theme }) => theme.COLORS.white};
+  background: ${({ theme }) => theme.colors.white};
 `;
 
 export const NewsWrapper = styled.div`
@@ -33,11 +33,11 @@ export const Description = styled.small`
   width: 100%;
   padding-bottom: 16px;
 
-  color: ${({ theme }) => theme.COLORS.secondary.gray500};
+  color: ${({ theme }) => theme.colors.secondary.gray500};
 `;
 
 export const ReadMore = styled.small`
-  color: ${({ theme }) => theme.COLORS.primary.orange400};
+  color: ${({ theme }) => theme.colors.primary.orange400};
 `;
 
 export const GraphImage = styled(Image)``;

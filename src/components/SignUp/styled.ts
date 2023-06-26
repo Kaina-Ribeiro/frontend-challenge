@@ -13,11 +13,11 @@ export const Title = styled.h4`
   font-weight: normal;
 
   span:first-child {
-    color: ${({ theme }) => theme.COLORS.primary.orange500};
+    color: ${({ theme }) => theme.colors.primary.orange500};
     font-weight: bold;
   }
   span:last-child {
-    color: ${({ theme }) => theme.COLORS.secondary.gray500};
+    color: ${({ theme }) => theme.colors.secondary.gray500};
     font-weight: bold;
   }
 `;
@@ -28,15 +28,15 @@ export const ButtonWrapper = styled.div`
 `;
 
 export const SignUpMessage = styled.p`
-  font-size: ${({ theme }) => theme.FONT_SIZE.XXSM}px;
+  font-size: ${({ theme }) => theme.font_size.XXSM}px;
   line-height: 14px;
 
   span:nth-of-type(1) {
-    color: ${({ theme }) => theme.COLORS.primary.orange500};
+    color: ${({ theme }) => theme.colors.primary.orange500};
     font-weight: bold;
   }
   span:nth-of-type(2) {
-    color: ${({ theme }) => theme.COLORS.secondary.gray500};
+    color: ${({ theme }) => theme.colors.secondary.gray500};
     font-weight: bold;
   }
 `;

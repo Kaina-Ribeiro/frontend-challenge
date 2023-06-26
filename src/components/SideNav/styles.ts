@@ -9,9 +9,9 @@ export const Container = styled.div`
   gap: 32px;
   padding-top: 48px;
 
-  background: ${({ theme }) => theme.COLORS.white};
+  background: ${({ theme }) => theme.colors.white};
   border-width: 1px 0px;
   border-style: solid;
-  border-color: ${({ theme }) => theme.COLORS.secondary.gray300};
+  border-color: ${({ theme }) => theme.colors.secondary.gray300};
   box-shadow: 0px 4px 8px rgba(77, 77, 77, 0.1);
 `;
