@@ -10,6 +10,12 @@ export const Container = styled.section`
 export const WavesImg = styled(Image)`
   max-width: 100%;
   width: 100%;
+
+  object-fit: cover;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    height: 180px;
+  }
 `;
 
 export const CarouselSection = styled.section`
@@ -21,7 +27,11 @@ export const CarouselSection = styled.section`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding-top: 60px;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    justify-content: center;
+    padding-top: 56px;
+    padding: 56px 24px 0 24px;
+  }
   transition: padding 0.2s;
 `;
-
-export const CarouselWrapper = styled.div``;

@@ -6,17 +6,21 @@ import HeaderDesktop from '../HeaderDesktop';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 
 import HeaderTablet from '../HeaderTablet';
+import HeaderMobile from '../HeaderMobile';
 
 type LayoutProps = {
   children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
-  const matches = useMediaQuery('768px');
+  const matchesTablet = useMediaQuery('768px');
+  const matchesMobile = useMediaQuery('600px');
 
   return (
     <MainContainer>
-      {matches ? <HeaderTablet /> : <HeaderDesktop />}
+      {!matchesTablet && !matchesMobile && <HeaderDesktop />}
+      {!matchesMobile && matchesTablet && <HeaderTablet />}
+      {matchesMobile && <HeaderMobile />}
 
       {children}
       <FooterCopyright logo={true} />

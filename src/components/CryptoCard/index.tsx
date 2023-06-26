@@ -1,4 +1,4 @@
-import { Container, Description, ImageLabel, SvgImage } from './styles';
+import { Container, CryptoCardTitle, Description, ImageLabel, SvgImage } from './styles';
 
 type CryptoCardProps = {
   imageLogo: string;
@@ -13,7 +13,7 @@ const CryptoCard = ({ imageLogo, label, title, description }: CryptoCardProps) =
       <SvgImage src={imageLogo} alt="logo" />
 
       <ImageLabel>{label}</ImageLabel>
-      <h4>{title}</h4>
+      <CryptoCardTitle>{title}</CryptoCardTitle>
       <Description>{description}</Description>
     </Container>
   );

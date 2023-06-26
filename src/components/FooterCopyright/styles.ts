@@ -24,5 +24,14 @@ export const Container = styled.div<FooterProps>`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding: 20px 48px;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    label {
+      display: none;
+    }
+
+    justify-content: center;
+  }
+
   transition: padding 0.2s;
 `;

@@ -73,6 +73,7 @@ export const ButtonWrapper = styled.div`
 export const LoggedHeader = styled.div`
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 
   padding: 14px 40px;

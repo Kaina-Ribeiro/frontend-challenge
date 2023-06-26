@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { Swiper } from 'swiper/react';
 
 export const Container = styled.section`
+  width: 100%;
   display: flex;
   gap: 32px;
   align-items: center;
-  width: 100%;
   padding: 120px 112px 130px 112px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #f7f7f7 100%);
 
@@ -13,7 +14,14 @@ export const Container = styled.section`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    gap: 40px;
     flex-direction: column-reverse;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    padding: 56px 24px;
+
+    gap: 24px;
   }
   transition: all 0.2s;
 `;
@@ -48,5 +56,15 @@ export const CardGroup2 = styled.div`
     gap: 24px;
     padding-left: 80px;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    gap: 24px;
+    padding-left: 0;
+  }
   transition: all 0.2s;
+`;
+
+export const CryptoSwiper = styled(Swiper)`
+  width: 100%;
+  height: 100%;
 `;

@@ -6,8 +6,7 @@ import { ButtonIcon, ButtonText, Container, Description, TagsWrapper, Title } fr
 const SignUpNow = () => {
   return (
     <Container>
-      <Title>Lorem ipsum dolor sit</Title>
-      <Title>amet, consectetur</Title>
+      <Title>Lorem ipsum dolor sit amet, consectetur</Title>
 
       <Description>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus

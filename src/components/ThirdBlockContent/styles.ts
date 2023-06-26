@@ -7,6 +7,7 @@ export const Container = styled.section`
   align-items: center;
   gap: 32px;
   width: 100%;
+  height: 100%;
   padding: 120px 112px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
@@ -15,6 +16,10 @@ export const Container = styled.section`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     padding: 80px 48px;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    padding: 56px 24px;
   }
   transition: padding 0.2s;
 `;

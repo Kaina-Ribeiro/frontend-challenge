@@ -3,12 +3,22 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 590px;
+  max-width: 590px;
+  width: 100%;
 
   flex-shrink: 0;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-    width: 320px;
+    max-width: 320px;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    max-width: 400px;
+    align-items: center;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    width: 270px;
   }
   transition: all 0.2s;
 `;
@@ -24,7 +34,16 @@ export const Title = styled.h1`
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     font-size: ${({ theme }) => theme.font_size.XL}px;
-    line-height: 40px;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    font-size: ${({ theme }) => theme.font_size.L}px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    font-size: ${({ theme }) => theme.font_size.MD}px;
   }
   transition: all 0.2s;
 `;
@@ -42,6 +61,15 @@ export const Description = styled.h5`
 
     font-size: ${({ theme }) => theme.font_size.SM}px;
     line-height: 24px;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    margin-top: 8px;
+    margin-bottom: 24px;
+
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+    line-height: 24px;
+    text-align: center;
   }
 `;
 
@@ -62,7 +90,13 @@ export const ButtonIcon = styled.button`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     width: 232px;
   }
-  transition: width 0.2s;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    width: 180px;
+    padding: 8px 16px;
+    margin-bottom: 24px;
+  }
+  transition: all 0.2s;
 `;
 
 export const ButtonText = styled.span`
@@ -70,14 +104,26 @@ export const ButtonText = styled.span`
   font-size: ${({ theme }) => theme.font_size.SM}px;
   line-height: 24px;
   font-weight: bold;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+    line-height: 16px;
+  }
+  transition: all 0.2s;
 `;
 
 export const TagsWrapper = styled.div`
   display: flex;
+  align-items: center;
   gap: 32px;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     gap: 24px;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    gap: 16px;
+  }
+
   transition: all 0.2s;
 `;
