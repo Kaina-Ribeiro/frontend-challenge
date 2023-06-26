@@ -4,6 +4,12 @@ import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
+
+import { persistor, store } from '../store/store';
+
+import { Provider } from 'react-redux';
+
+import { PersistGate } from 'redux-persist/integration/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'react-tooltip/dist/react-tooltip.css';
@@ -20,9 +26,13 @@ export default function App({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <GlobalStyle />
-      {getLayout(<Component {...pageProps} />)}
-    </ThemeProvider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider theme={defaultTheme}>
+          <GlobalStyle />
+          {getLayout(<Component {...pageProps} />)}
+        </ThemeProvider>
+      </PersistGate>
+    </Provider>
   );
 }

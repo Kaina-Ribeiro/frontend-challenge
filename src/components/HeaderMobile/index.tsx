@@ -1,37 +1,40 @@
 import logoImg from '../../assets/logo.svg';
-import hamburgerMenu from '../../assets/hamburgerMenu.svg';
 
 import Image from 'next/image';
 
 import { Container, HeaderFooter, HeaderTitle, LoggedHeader } from './styles';
 import { useState } from 'react';
-import Profile from '../Profile';
+
 import ConfirmationModal from '../ConfirmationModal';
 import SignIn from '../SignIn';
 import SignUp from '../SignUp';
 import TextScroll from '../TextScroll';
+import { useAppSelector } from '@/hooks/reduxHooks';
+import { userState } from '@/store/slices/userSlice';
+import DropdownMenu from '../DropdownMenu';
+import HamburguerMenu from '../HamburguerMenu';
 
 const HeaderMobile = ({ withScroll = true }: { withScroll?: boolean }) => {
-  const [logged, setLogged] = useState(false);
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+  const { user } = useAppSelector(userState);
 
   return (
     <Container>
-      {!logged ? (
+      {!user.email ? (
         <HeaderTitle>
           <Image src={logoImg} alt="logo" />
-          <Image src={hamburgerMenu} alt="hamburguer menu" />
+          <HamburguerMenu />
         </HeaderTitle>
       ) : (
         <LoggedHeader>
-          <Image src={hamburgerMenu} alt="hamburguer menu" />
+          <HamburguerMenu />
           <Image src={logoImg} alt="logo" />
-          <Profile onClick={() => setLogged((l) => !l)} />
+          <DropdownMenu />
         </LoggedHeader>
       )}
 
-      {!logged && withScroll && (
+      {!user.email && withScroll && (
         <HeaderFooter>
           <TextScroll />
         </HeaderFooter>

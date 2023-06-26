@@ -17,7 +17,7 @@ import logo4 from '../../assets/cryptosLogo/solana.svg';
 import Image from 'next/image';
 
 import CryptoDropdown from '../CryptoDropdown';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 const topCryptos = [
   { logo: logo1, cryptoName: 'Bitcoin BTC', price: 'US$ 25.499,52', change: '+5,65%' },

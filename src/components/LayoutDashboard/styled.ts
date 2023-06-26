@@ -9,14 +9,14 @@ export const MainContainer = styled.main`
   flex-direction: column;
 
   background: #f5f5f5;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    background: ${({ theme }) => theme.colors.white};
+  }
   margin: 0 auto;
 `;
 
 export const ContentWrapper = styled.div`
   position: relative;
-
-  background: #f5f5f5;
-
   flex: 1;
   display: flex;
 `;

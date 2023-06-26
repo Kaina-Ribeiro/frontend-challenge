@@ -1,11 +1,13 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode, useEffect } from 'react';
 import HeaderDesktop from '../HeaderDesktop';
 import { ContentWrapper, MainContainer } from './styled';
 import FooterCopyright from '../FooterCopyright';
 import SideNav from '../SideNav';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import HeaderTablet from '../HeaderTablet';
 import HeaderMobile from '../HeaderMobile';
+import { useAppDispatch } from '@/hooks/reduxHooks';
+import { closeMenu } from '@/store/slices/menuSlice';
 
 type LayoutDashboardProps = {
   children: ReactNode;
@@ -14,27 +16,27 @@ type LayoutDashboardProps = {
 const LayoutDashboard = ({ children }: LayoutDashboardProps) => {
   const matchesTablet = useMediaQuery('768px');
   const matchesMobile = useMediaQuery('600px');
-  const [showboard, setShowBoard] = useState(true);
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     if (!matchesTablet) {
-      setShowBoard(false);
+      dispatch(closeMenu());
       return;
     }
     return;
-  }, [matchesTablet]);
+  }, [dispatch, matchesTablet]);
 
   return (
     <MainContainer>
       {!matchesTablet && !matchesMobile && <HeaderDesktop />}
-      {!matchesMobile && matchesTablet && (
-        <HeaderTablet handleOpenMenu={() => setShowBoard((prev) => !prev)} withScroll={false} />
-      )}
+      {!matchesMobile && matchesTablet && <HeaderTablet withScroll={false} />}
       {matchesMobile && <HeaderMobile withScroll={false} />}
+
       <ContentWrapper>
-        <SideNav showboard={showboard} />
+        <SideNav />
         {children}
       </ContentWrapper>
+
       <FooterCopyright logo={matchesTablet} />
     </MainContainer>
   );

@@ -13,23 +13,27 @@ import {
   ButtonWrapper,
 } from './styles';
 import { useState } from 'react';
-import Profile from '../Profile';
+
 import ConfirmationModal from '../ConfirmationModal';
 import SignIn from '../SignIn';
 import SignUp from '../SignUp';
 import TextScroll from '../TextScroll';
+import DropdownMenu from '../DropdownMenu';
+import { useAppSelector } from '@/hooks/reduxHooks';
+
+import { userState } from '@/store/slices/userSlice';
 
 const HeaderDesktop = () => {
-  const [logged, setLogged] = useState(false);
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+  const { user } = useAppSelector(userState);
 
   return (
     <Container>
       <LeftContentWrapper>
         <Image src={logoImg} alt="logo" />
 
-        {!logged && (
+        {!user.email && (
           <TitlesWrapper>
             <li>
               <Link href="/dashboard">About us</Link>
@@ -41,7 +45,7 @@ const HeaderDesktop = () => {
         )}
       </LeftContentWrapper>
 
-      {!logged && (
+      {!user.email && (
         <RightContentWrapper>
           <TextScroll />
 
@@ -58,7 +62,7 @@ const HeaderDesktop = () => {
           </HeaderButtons>
         </RightContentWrapper>
       )}
-      {logged && <Profile onClick={() => setLogged((l) => !l)} />}
+      {user.email && <DropdownMenu />}
 
       {signInModal && (
         <ConfirmationModal

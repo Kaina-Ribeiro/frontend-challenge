@@ -1,5 +1,4 @@
 import logoImg from '../../assets/logo.svg';
-import hamburgerMenu from '../../assets/hamburgerMenu.svg';
 
 import Link from 'next/link';
 
@@ -15,28 +14,31 @@ import {
   HeaderFooter,
   HeaderTitle,
   LoggedHeader,
-  ButtonMenu,
 } from './styles';
 import { useState } from 'react';
-import Profile from '../Profile';
+
 import ConfirmationModal from '../ConfirmationModal';
 import SignIn from '../SignIn';
 import SignUp from '../SignUp';
 import TextScroll from '../TextScroll';
+import { useAppSelector } from '@/hooks/reduxHooks';
+
+import DropdownMenu from '../DropdownMenu';
+import { userState } from '@/store/slices/userSlice';
+import HamburguerMenu from '../HamburguerMenu';
 
 type HeaderTabletProps = {
   withScroll?: boolean;
-  handleOpenMenu: () => void;
 };
 
-const HeaderTablet = ({ withScroll = true, handleOpenMenu }: HeaderTabletProps) => {
-  const [logged, setLogged] = useState(true);
+const HeaderTablet = ({ withScroll = true }: HeaderTabletProps) => {
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
+  const { user } = useAppSelector(userState);
 
   return (
     <Container>
-      {!logged ? (
+      {!user.email ? (
         <HeaderTitle>
           <LeftContentWrapper>
             <Image src={logoImg} alt="logo" />
@@ -75,15 +77,13 @@ const HeaderTablet = ({ withScroll = true, handleOpenMenu }: HeaderTabletProps) 
         </HeaderTitle>
       ) : (
         <LoggedHeader>
-          <ButtonMenu onClick={handleOpenMenu}>
-            <Image src={hamburgerMenu} alt="hamburguer menu" />
-          </ButtonMenu>
+          <HamburguerMenu />
           <Image src={logoImg} alt="logo" />
-          <Profile onClick={() => setLogged((l) => !l)} />
+          <DropdownMenu />
         </LoggedHeader>
       )}
 
-      {!logged && withScroll && (
+      {!user.email && withScroll && (
         <HeaderFooter>
           <TextScroll />
         </HeaderFooter>

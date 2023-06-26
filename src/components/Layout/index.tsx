@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import { MainContainer } from './styled';
 import FooterCopyright from '../FooterCopyright';
 import HeaderDesktop from '../HeaderDesktop';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 import HeaderTablet from '../HeaderTablet';
 import HeaderMobile from '../HeaderMobile';

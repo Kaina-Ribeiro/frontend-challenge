@@ -9,7 +9,7 @@ import {
   TotalValue,
 } from './styles';
 import balance from '../../assets/cardsIcons/balance.svg';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 const MoneyBalanceCard = () => {
   const matches = useMediaQuery('600px');

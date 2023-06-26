@@ -4,6 +4,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  env: {
+    USER_TOKEN: 'user-token',
+  },
 };
 
 module.exports = nextConfig;

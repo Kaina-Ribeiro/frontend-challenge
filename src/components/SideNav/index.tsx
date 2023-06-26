@@ -6,6 +6,7 @@ import business from '../../assets/cardsIcons/business.svg';
 import { SideNavContainer } from './styles';
 
 import NavBar from './NavBar/NavBar';
+import { useAppSelector } from '@/hooks/reduxHooks';
 
 const navButtons = [
   {
@@ -30,10 +31,12 @@ const navButtons = [
   },
 ];
 
-const SideNav = ({ showboard }: { showboard: boolean }) => {
+const SideNav = () => {
+  const menuState = useAppSelector((state) => state.menu.open);
+
   return (
-    <SideNavContainer showboard={showboard}>
-      <NavBar navButtons={navButtons} hide={showboard} />
+    <SideNavContainer showboard={menuState}>
+      <NavBar navButtons={navButtons} hide={menuState} />
     </SideNavContainer>
   );
 };

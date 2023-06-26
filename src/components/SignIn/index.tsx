@@ -15,6 +15,9 @@ import InputIcon from '../InputIcon';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import { useAppDispatch } from '@/hooks/reduxHooks';
+import { setUser } from '@/store/slices/userSlice';
+import { useRouter } from 'next/router';
 
 type SignInProps = {
   email: string;
@@ -30,16 +33,20 @@ const schema = yup
 
 const SignIn = () => {
   const [seePassword, setSeePassword] = useState(false);
+  const dispatch = useAppDispatch();
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
     clearErrors,
     formState: { errors },
   } = useForm<SignInProps>({ resolver: yupResolver(schema) });
-  const onSubmit = async (data: SignInProps) => {
+  const onSubmit = async ({ email, password }: SignInProps) => {
     try {
+      dispatch(setUser({ email, password }));
       clearErrors();
-      console.log(data);
+      router.push('/dashboard');
     } catch (err) {
       console.log(err);
     }

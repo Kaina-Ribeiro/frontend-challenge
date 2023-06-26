@@ -5,7 +5,7 @@ import cryptoIcon2 from '../../assets/cardsIcons/cryptoIcon2.svg';
 import business from '../../assets/cardsIcons/business.svg';
 import computer from '../../assets/cardsIcons/computer.svg';
 import DescriptionText from '../DescriptionText';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 import { SwiperSlide } from 'swiper/react';
 import { Virtual } from 'swiper';
 

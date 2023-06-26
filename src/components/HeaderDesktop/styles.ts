@@ -12,7 +12,7 @@ export const Container = styled.div`
   box-shadow: 0px 4px 8px rgba(77, 77, 77, 0.1);
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
-    padding: 12px 12px;
+    padding: 16px 16px;
   }
 
   transition: all 0.2s;

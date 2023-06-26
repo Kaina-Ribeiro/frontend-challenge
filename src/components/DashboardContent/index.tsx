@@ -5,7 +5,7 @@ import DailyVariationCard from '../DailyVariationCard';
 import NewsCard from '../NewsCard';
 import MyWallet from '../MyWallet';
 import MyWalletMobile from '../MyWalletMobile';
-import { useMediaQuery } from '../hooks/useMediaQuery';
+import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 const DashboardContent = () => {
   const matches = useMediaQuery('600px');

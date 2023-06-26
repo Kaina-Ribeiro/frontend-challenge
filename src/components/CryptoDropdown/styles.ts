@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   max-width: 272px;
   width: 100%;
+  cursor: pointer;
 `;
 
 export const TitleWrapper = styled.div`
@@ -48,6 +49,9 @@ type DropdownProps = {
 };
 
 export const ArrowImage = styled(Image)<DropdownProps>`
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
   ${({ active }) =>
     active
       ? css`
