@@ -22,6 +22,7 @@ export const Container = styled.button<ButtonProps>`
           background-color: ${theme.colors.primary.orange500};
         `
       : css`
+          padding: 0;
           background-color: ${theme.colors.white};
           border-radius: 0px;
         `};

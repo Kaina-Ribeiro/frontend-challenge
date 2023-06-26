@@ -54,7 +54,12 @@ declare module 'styled-components' {
       black: string;
       textBase: string;
     };
-
+    breakpoints: {
+      sm: string;
+      md: string;
+      lg: string;
+      xl: string;
+    };
     font_size: {
       XXSM: number;
       XSM: number;

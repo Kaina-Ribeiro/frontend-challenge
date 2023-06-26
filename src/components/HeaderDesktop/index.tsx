@@ -17,6 +17,7 @@ import Profile from '../Profile';
 import ConfirmationModal from '../ConfirmationModal';
 import SignIn from '../SignIn';
 import SignUp from '../SignUp';
+import TextScroll from '../TextScroll';
 
 const HeaderDesktop = () => {
   const [logged, setLogged] = useState(false);
@@ -42,27 +43,11 @@ const HeaderDesktop = () => {
 
       {!logged && (
         <RightContentWrapper>
-          <TitlesWrapper>
-            <li>
-              <label>
-                BIT R$ 23,62 <span style={{ color: 'green' }}>+7,082</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                DOG R$ 23,62 <span style={{ color: 'red' }}>-5,230</span>
-              </label>
-            </li>
-          </TitlesWrapper>
+          <TextScroll />
 
           <HeaderButtons>
-            <ButtonWrapper>
-              <Button
-                title={'Sign In'}
-                onClick={() => setSignInModal(!signInModal)}
-                color="WHITE"
-              />
-            </ButtonWrapper>
+            <Button title={'Sign In'} onClick={() => setSignInModal(!signInModal)} color="WHITE" />
+
             <ButtonWrapper>
               <Button
                 title={'Sign Up'}
