@@ -5,9 +5,11 @@ type ButtonProps = {
 };
 
 export const Container = styled.button<ButtonProps>`
-  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  padding: 14px 24px;
 
   ${({ theme, color }) =>
     color === 'PRIMARY'
@@ -24,6 +26,7 @@ export const Container = styled.button<ButtonProps>`
         `};
 
   cursor: pointer;
+
   p {
     color: ${({ theme, color }) =>
       color === 'PRIMARY' ? theme.COLORS.white : theme.COLORS.textBase};

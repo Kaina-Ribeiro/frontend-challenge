@@ -3,7 +3,7 @@ import { Container } from './styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   title: string;
-  color: 'PRIMARY' | 'WHITE';
+  color?: 'PRIMARY' | 'WHITE';
 };
 
 export const Button = ({ title, color = 'PRIMARY', ...rest }: ButtonProps) => {

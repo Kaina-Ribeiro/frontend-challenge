@@ -13,10 +13,14 @@ import {
 } from './styles';
 import { useState } from 'react';
 import Profile from '../Profile';
+import ConfirmationModal from '../ConfirmationModal';
+import SignIn from '../SignIn';
+import SignUp from '../SignUp';
 
 const Header = () => {
-  const [logged, setLogged] = useState(true);
-
+  const [logged, setLogged] = useState(false);
+  const [signInModal, setSignInModal] = useState(false);
+  const [signUpModal, setSignUpModal] = useState(false);
   return (
     <Container>
       <LeftContentWrapper>
@@ -51,12 +55,16 @@ const Header = () => {
 
           <TitlesWrapper>
             <li>
-              <Button title={'Sign In'} onClick={() => setLogged((l) => !l)} color="WHITE" />
+              <Button
+                title={'Sign In'}
+                onClick={() => setSignInModal(!signInModal)}
+                color="WHITE"
+              />
             </li>
             <li>
               <ButtonHeader
                 title={'Sign Up'}
-                onClick={() => setLogged((l) => !l)}
+                onClick={() => setSignUpModal(!signUpModal)}
                 color="PRIMARY"
               />
             </li>
@@ -64,6 +72,28 @@ const Header = () => {
         </RightContentWrapper>
       )}
       {logged && <Profile onClick={() => setLogged((l) => !l)} />}
+
+      {signInModal && (
+        <ConfirmationModal
+          modalwidth={320}
+          modalheight={343}
+          isOpen={signInModal}
+          handleClose={() => setSignInModal(!signInModal)}
+        >
+          <SignIn />
+        </ConfirmationModal>
+      )}
+
+      {signUpModal && (
+        <ConfirmationModal
+          modalwidth={320}
+          modalheight={552}
+          isOpen={signUpModal}
+          handleClose={() => setSignUpModal(!signUpModal)}
+        >
+          <SignUp />
+        </ConfirmationModal>
+      )}
     </Container>
   );
 };
