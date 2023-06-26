@@ -3,20 +3,29 @@ import HeaderDesktop from '../HeaderDesktop';
 import { ContentWrapper, MainContainer } from './styled';
 import FooterCopyright from '../FooterCopyright';
 import SideNav from '../SideNav';
+import { useMediaQuery } from '../hooks/useMediaQuery';
+import HeaderTablet from '../HeaderTablet';
+import HeaderMobile from '../HeaderMobile';
 
 type LayoutDashboardProps = {
   children: ReactNode;
 };
 
 const LayoutDashboard = ({ children }: LayoutDashboardProps) => {
+  const matchesTablet = useMediaQuery('768px');
+  const matchesMobile = useMediaQuery('600px');
+
   return (
     <MainContainer>
-      <HeaderDesktop />
+      {!matchesTablet && !matchesMobile && <HeaderDesktop />}
+      {!matchesMobile && matchesTablet && <HeaderTablet withScroll={false} />}
+      {matchesMobile && <HeaderMobile withScroll={false} />}
       <ContentWrapper>
-        <SideNav />
+        {!matchesTablet && <SideNav />}
+
         {children}
       </ContentWrapper>
-      <FooterCopyright />
+      <FooterCopyright logo={matchesTablet} />
     </MainContainer>
   );
 };

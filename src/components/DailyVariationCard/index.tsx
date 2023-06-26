@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import {
   Container,
   CryptoName,
@@ -6,6 +5,9 @@ import {
   Title,
   VariationWrapper,
   VariationText,
+  CryptoInfo,
+  CryptoAbrvName,
+  CryptoLogo,
 } from './styles';
 import ethereum from '../../assets/cryptosLogo/ethereum.svg';
 import graph from '../../assets/cardsIcons/graph.svg';
@@ -16,12 +18,14 @@ const DailyVariationCard = () => {
       <VariationWrapper>
         <Title>Daily Variation</Title>
 
-        <CryptoName>
-          <Image src={ethereum} alt="Balance Logo" />
+        <CryptoInfo>
+          <CryptoName>
+            <CryptoLogo src={ethereum} alt="Balance Logo" />
+            <CryptoAbrvName>ETH</CryptoAbrvName>
+          </CryptoName>
 
-          <label>ETH</label>
-        </CryptoName>
-        <VariationText>+5,65%</VariationText>
+          <VariationText>+5,65%</VariationText>
+        </CryptoInfo>
       </VariationWrapper>
 
       <GraphImage src={graph} alt="Balance Logo" />

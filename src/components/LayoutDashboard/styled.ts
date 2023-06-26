@@ -17,5 +17,4 @@ export const ContentWrapper = styled.div`
 
   flex: 1;
   display: flex;
-  gap: 69px;
 `;

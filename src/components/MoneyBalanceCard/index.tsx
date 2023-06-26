@@ -1,29 +1,33 @@
-import Image from 'next/image';
 import {
+  BalanceImage,
   BalanceInfoWrapper,
   Container,
   ImageWrapper,
   MoneyDescription,
   MoneyInfo,
-  MoneyInfoWrapper,
+  SmallDescription,
   TotalValue,
 } from './styles';
 import balance from '../../assets/cardsIcons/balance.svg';
+import { useMediaQuery } from '../hooks/useMediaQuery';
 
 const MoneyBalanceCard = () => {
+  const matches = useMediaQuery('600px');
   return (
     <Container>
       <BalanceInfoWrapper>
         <ImageWrapper>
-          <Image src={balance} alt="Balance Logo"></Image>
+          <BalanceImage src={balance} alt="Balance Logo" />
         </ImageWrapper>
-        <MoneyInfoWrapper>
-          <MoneyInfo>Balance in US$</MoneyInfo>
-          <span>
-            <small>(approximately)</small>
-          </span>
-        </MoneyInfoWrapper>
+
+        <div>
+          <MoneyInfo>
+            Balance <span>in US$</span>
+          </MoneyInfo>
+          <SmallDescription>{matches ? 'in US$' : '(approximately)'}</SmallDescription>
+        </div>
       </BalanceInfoWrapper>
+
       <TotalValue>
         <MoneyDescription>$32,256.56</MoneyDescription>
       </TotalValue>

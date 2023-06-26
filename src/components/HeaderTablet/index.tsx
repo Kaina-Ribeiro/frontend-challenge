@@ -23,8 +23,8 @@ import SignIn from '../SignIn';
 import SignUp from '../SignUp';
 import TextScroll from '../TextScroll';
 
-const HeaderTablet = () => {
-  const [logged, setLogged] = useState(false);
+const HeaderTablet = ({ withScroll = true }: { withScroll?: boolean }) => {
+  const [logged, setLogged] = useState(true);
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
 
@@ -75,7 +75,7 @@ const HeaderTablet = () => {
         </LoggedHeader>
       )}
 
-      {!logged && (
+      {!logged && withScroll && (
         <HeaderFooter>
           <TextScroll />
         </HeaderFooter>

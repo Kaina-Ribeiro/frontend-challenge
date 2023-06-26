@@ -11,7 +11,7 @@ import SignIn from '../SignIn';
 import SignUp from '../SignUp';
 import TextScroll from '../TextScroll';
 
-const HeaderMobile = () => {
+const HeaderMobile = ({ withScroll = true }: { withScroll?: boolean }) => {
   const [logged, setLogged] = useState(false);
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
@@ -31,7 +31,7 @@ const HeaderMobile = () => {
         </LoggedHeader>
       )}
 
-      {!logged && (
+      {!logged && withScroll && (
         <HeaderFooter>
           <TextScroll />
         </HeaderFooter>

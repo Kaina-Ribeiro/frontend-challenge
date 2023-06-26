@@ -1,6 +1,4 @@
-import { Container, GraphImage, Title, NewsWrapper, ReadMore, Description } from './styles';
-
-import elephant from '../../assets/cardsIcons/elephant.svg';
+import { Container, Title, NewsWrapper, ReadMore, Description, ElephantImage } from './styles';
 
 const NewsCard = () => {
   return (
@@ -12,7 +10,7 @@ const NewsCard = () => {
         <ReadMore>Read more +</ReadMore>
       </NewsWrapper>
 
-      <GraphImage src={elephant} alt="news image" />
+      <ElephantImage />
     </Container>
   );
 };

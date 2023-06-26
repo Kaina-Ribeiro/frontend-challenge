@@ -1,26 +1,25 @@
-import { ButtonTable, CryptoLogoName, TableContainer } from './styles';
+import {
+  ButtonTable,
+  CryptoHolding,
+  CryptoLogoName,
+  CryptoPrice,
+  HoldingPrice,
+  TableContainer,
+  TradeImage,
+} from './styles';
 
-import logo1 from '../../assets/cryptosLogo/bitcoin.svg';
-import logo2 from '../../assets/cryptosLogo/ethereum.svg';
-import logo3 from '../../assets/cryptosLogo/cardano.svg';
-import logo4 from '../../assets/cryptosLogo/solana.svg';
 import finance from '../../assets/cardsIcons/finance.svg';
 import Image from 'next/image';
+import { topCryptos } from '@/mocks/topCryptoArray';
 
 const CryptoTable = () => {
-  const topCryptos = [
-    { logo: logo1, crypto: 'Bitcoin BTC', price: 'US$ 25.499,52', change: '+5,65%' },
-    { logo: logo2, crypto: 'Ethereum ETH', price: 'US$ 15.499,52', change: '-5,65%' },
-    { logo: logo3, crypto: 'Cardano ADA', price: 'US$ 5.499,52', change: '-5,65%' },
-    { logo: logo4, crypto: 'Solana SOL', price: 'US$ 2.499,52', change: '+5,65%' },
-  ];
   return (
     <TableContainer>
       <thead>
         <tr>
           <th>#</th>
           <th>Crypto</th>
-          <th>Price</th>
+          <th>Holdings</th>
           <th>Change</th>
           <th>Trade</th>
         </tr>
@@ -39,13 +38,18 @@ const CryptoTable = () => {
                   </CryptoLogoName>
                 </td>
 
-                <td>{item.price}</td>
+                <td>
+                  <HoldingPrice>
+                    <CryptoPrice>{item.price}</CryptoPrice>
+                    <CryptoHolding>{item.holding}</CryptoHolding>
+                  </HoldingPrice>
+                </td>
 
                 <td>{item.change}</td>
 
                 <td>
                   <ButtonTable type="button">
-                    <Image src={finance} alt={`${index} finance`} />
+                    <TradeImage src={finance} alt={`${index} finance`} />
                   </ButtonTable>
                 </td>
               </tr>

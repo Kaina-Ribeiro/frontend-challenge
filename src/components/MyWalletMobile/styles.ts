@@ -5,10 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
 
   width: 100%;
-  min-height: 389px;
 
-  background: ${({ theme }) => theme.colors.white};
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 `;
 
@@ -16,40 +13,45 @@ export const CardHeader = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;
-  border-bottom: 1px solid ${({ theme }) => theme.colors.secondary.gray200};
+  padding: 24px 0 15px 0;
+  border-top: 1px solid ${({ theme }) => theme.colors.secondary.gray300};
 `;
 
 export const TitleWrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 `;
 
-export const Title = styled.h4``;
+export const Title = styled.h5`
+  line-height: 32px;
+`;
 
 export const AddCryptoButton = styled.button`
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
+  width: 24px;
+  height: 24px;
+  padding: 6px;
   background: ${({ theme }) => theme.colors.primary.orange500};
   border-radius: 32px;
   cursor: pointer;
-
-  & > span {
-    font-size: ${({ theme }) => theme.font_size.XSM}px;
-    line-height: 16px;
-    color: ${({ theme }) => theme.colors.white};
-  }
 `;
 
 export const CardBody = styled.div`
-  flex: 1;
+  height: 190px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
+  background: ${({ theme }) => theme.colors.white};
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+`;
 
-  padding-top: 24px;
+export const CryptosWalletWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
 `;

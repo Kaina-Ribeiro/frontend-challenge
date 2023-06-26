@@ -1,15 +1,13 @@
-import { Container, Title } from './styles';
+import { Container, EmptyMessage, Title, EmptyWalletIcon } from './styles';
 
 import emptyWallet from '../../assets/cardsIcons/emptyWallet.svg';
-
-import Image from 'next/image';
 
 const NothingHereYet = () => {
   return (
     <Container>
-      <Image src={emptyWallet} alt="news image" />
+      <EmptyWalletIcon src={emptyWallet} alt="news image" />
       <Title>Nothing here yet...</Title>
-      <label>Add a crypto and start earning</label>
+      <EmptyMessage>Add a crypto and start earning</EmptyMessage>
     </Container>
   );
 };
