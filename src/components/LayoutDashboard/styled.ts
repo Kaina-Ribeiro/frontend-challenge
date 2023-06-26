@@ -13,6 +13,8 @@ export const MainContainer = styled.main`
 `;
 
 export const ContentWrapper = styled.div`
+  position: relative;
+
   background: #f5f5f5;
 
   flex: 1;

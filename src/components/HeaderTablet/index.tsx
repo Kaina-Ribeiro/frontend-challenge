@@ -15,6 +15,7 @@ import {
   HeaderFooter,
   HeaderTitle,
   LoggedHeader,
+  ButtonMenu,
 } from './styles';
 import { useState } from 'react';
 import Profile from '../Profile';
@@ -23,7 +24,12 @@ import SignIn from '../SignIn';
 import SignUp from '../SignUp';
 import TextScroll from '../TextScroll';
 
-const HeaderTablet = ({ withScroll = true }: { withScroll?: boolean }) => {
+type HeaderTabletProps = {
+  withScroll?: boolean;
+  handleOpenMenu: () => void;
+};
+
+const HeaderTablet = ({ withScroll = true, handleOpenMenu }: HeaderTabletProps) => {
   const [logged, setLogged] = useState(true);
   const [signInModal, setSignInModal] = useState(false);
   const [signUpModal, setSignUpModal] = useState(false);
@@ -69,7 +75,9 @@ const HeaderTablet = ({ withScroll = true }: { withScroll?: boolean }) => {
         </HeaderTitle>
       ) : (
         <LoggedHeader>
-          <Image src={hamburgerMenu} alt="hamburguer menu" />
+          <ButtonMenu onClick={handleOpenMenu}>
+            <Image src={hamburgerMenu} alt="hamburguer menu" />
+          </ButtonMenu>
           <Image src={logoImg} alt="logo" />
           <Profile onClick={() => setLogged((l) => !l)} />
         </LoggedHeader>

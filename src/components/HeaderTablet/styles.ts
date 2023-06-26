@@ -79,3 +79,8 @@ export const LoggedHeader = styled.div`
 
   padding: 14px 40px;
 `;
+
+export const ButtonMenu = styled.button`
+  background: none;
+  cursor: pointer;
+`;

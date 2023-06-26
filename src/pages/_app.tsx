@@ -6,6 +6,7 @@ import { ReactElement, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'react-tooltip/dist/react-tooltip.css';
 
 export type NextPageWithLayout<P = Record<string, unknown>, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;

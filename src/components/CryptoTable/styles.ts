@@ -39,6 +39,15 @@ export const TableContainer = styled.table`
   tr:nth-child(even) {
     background-color: ${({ theme }) => theme.colors.secondary.gray100};
   }
+
+  .tooltip-background {
+    font-size: ${({ theme }) => theme.font_size.XSM}px;
+    color: ${({ theme }) => theme.colors.white};
+    max-width: 100px;
+    text-align: center;
+    line-height: 16px;
+    background-color: ${({ theme }) => theme.colors.primary.orange500};
+  }
 `;
 
 export const CryptoLogoName = styled.div`

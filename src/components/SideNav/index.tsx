@@ -3,18 +3,38 @@ import crypto from '../../assets/cardsIcons/cryptoIcon1.svg';
 import crypto2 from '../../assets/cardsIcons/cryptoIcon2.svg';
 import business from '../../assets/cardsIcons/business.svg';
 
-import Image from 'next/image';
+import { SideNavContainer } from './styles';
 
-import { Container } from './styles';
+import NavBar from './NavBar/NavBar';
 
-const SideNav = () => {
+const navButtons = [
+  {
+    label: 'Lorem Ipsum',
+    path: '/#',
+    icon: cryptoWallet,
+  },
+  {
+    label: 'Lorem Ipsum',
+    path: '/#',
+    icon: crypto2,
+  },
+  {
+    label: 'Lorem Ipsum',
+    path: '/#',
+    icon: crypto,
+  },
+  {
+    label: 'Lorem Ipsum',
+    path: '/#',
+    icon: business,
+  },
+];
+
+const SideNav = ({ showboard }: { showboard: boolean }) => {
   return (
-    <Container>
-      <Image src={cryptoWallet} width={32} height={32} alt="cryptoWallet" />
-      <Image src={crypto2} width={32} height={32} alt="crypto2 logo" />
-      <Image src={crypto} width={32} height={32} alt="crypto logo" />
-      <Image src={business} width={32} height={32} alt="business logo" />
-    </Container>
+    <SideNavContainer showboard={showboard}>
+      <NavBar navButtons={navButtons} hide={showboard} />
+    </SideNavContainer>
   );
 };
 

@@ -11,6 +11,7 @@ import {
 import finance from '../../assets/cardsIcons/finance.svg';
 import Image from 'next/image';
 import { topCryptos } from '@/mocks/topCryptoArray';
+import { Tooltip } from 'react-tooltip';
 
 const CryptoTable = () => {
   return (
@@ -48,9 +49,19 @@ const CryptoTable = () => {
                 <td>{item.change}</td>
 
                 <td>
-                  <ButtonTable type="button">
+                  <ButtonTable
+                    data-tooltip-id={`transfer-crypto-${index}`}
+                    data-tooltip-content="Transfer Crypto"
+                    type="button"
+                  >
                     <TradeImage src={finance} alt={`${index} finance`} />
                   </ButtonTable>
+
+                  <Tooltip
+                    className="tooltip-background"
+                    id={`transfer-crypto-${index}`}
+                    place="bottom"
+                  />
                 </td>
               </tr>
             );

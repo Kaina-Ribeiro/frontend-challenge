@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import HeaderDesktop from '../HeaderDesktop';
 import { ContentWrapper, MainContainer } from './styled';
 import FooterCopyright from '../FooterCopyright';
@@ -14,15 +14,25 @@ type LayoutDashboardProps = {
 const LayoutDashboard = ({ children }: LayoutDashboardProps) => {
   const matchesTablet = useMediaQuery('768px');
   const matchesMobile = useMediaQuery('600px');
+  const [showboard, setShowBoard] = useState(true);
+
+  useEffect(() => {
+    if (!matchesTablet) {
+      setShowBoard(false);
+      return;
+    }
+    return;
+  }, [matchesTablet]);
 
   return (
     <MainContainer>
       {!matchesTablet && !matchesMobile && <HeaderDesktop />}
-      {!matchesMobile && matchesTablet && <HeaderTablet withScroll={false} />}
+      {!matchesMobile && matchesTablet && (
+        <HeaderTablet handleOpenMenu={() => setShowBoard((prev) => !prev)} withScroll={false} />
+      )}
       {matchesMobile && <HeaderMobile withScroll={false} />}
       <ContentWrapper>
-        {!matchesTablet && <SideNav />}
-
+        <SideNav showboard={showboard} />
         {children}
       </ContentWrapper>
       <FooterCopyright logo={matchesTablet} />

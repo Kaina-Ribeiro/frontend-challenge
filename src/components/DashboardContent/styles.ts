@@ -25,6 +25,10 @@ export const InfoCards = styled.div`
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.lg}px) {
     flex-wrap: wrap;
   }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    gap: 16px;
+  }
 `;
 
 export const CardsWrapper = styled.div`
@@ -32,4 +36,12 @@ export const CardsWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 32px;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.md}px) {
+    gap: 24px;
+  }
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.sm}px) {
+    gap: 16px;
+  }
 `;
