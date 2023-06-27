@@ -16,7 +16,7 @@ import logo3 from '../../assets/cryptosLogo/cardano.svg';
 import logo4 from '../../assets/cryptosLogo/solana.svg';
 import Image from 'next/image';
 
-import CryptoDropdown from '../CryptoDropdown';
+import CryptoAccordion from '../CryptoAccordion';
 import { useMediaQuery } from '../../hooks/useMediaQuery';
 
 const topCryptos = [
@@ -33,7 +33,7 @@ const ThirdBlockContent = () => {
     <Container>
       <h3>Top Cryptos</h3>
       {matches ? (
-        <CryptoDropdown />
+        <CryptoAccordion />
       ) : (
         <Table>
           <thead>

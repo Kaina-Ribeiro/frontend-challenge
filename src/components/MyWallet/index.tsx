@@ -6,8 +6,12 @@ import plus from '../../assets/plus.svg';
 import Image from 'next/image';
 // import NothingHereYet from '../NothingHereYet';
 import CryptoTable from '../CryptoTable';
+import AddCrypto from '../AddCrypto';
+import ConfirmationModal from '../ConfirmationModal';
+import { useState } from 'react';
 
 const MyWallet = () => {
+  const [addCryptoModal, setAddCryptoModal] = useState(false);
   return (
     <Container>
       <CardHeader>
@@ -16,7 +20,7 @@ const MyWallet = () => {
           <Title>My Wallet</Title>
         </TitleWrapper>
 
-        <AddCryptoButton>
+        <AddCryptoButton onClick={() => setAddCryptoModal((a) => !a)}>
           <Image src={plus} alt="button plus" />
           <span>Add crypto</span>
         </AddCryptoButton>
@@ -27,6 +31,17 @@ const MyWallet = () => {
 
         <CryptoTable />
       </CardBody>
+
+      {addCryptoModal && (
+        <ConfirmationModal
+          modalwidth={272}
+          modalheight={256}
+          isOpen={addCryptoModal}
+          handleClose={() => setAddCryptoModal((a) => !a)}
+        >
+          <AddCrypto />
+        </ConfirmationModal>
+      )}
     </Container>
   );
 };

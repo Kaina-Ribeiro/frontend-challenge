@@ -32,7 +32,7 @@ export const ModalContent = styled.div<ModalProps>`
 
   display: flex;
 
-  padding: 24px;
+  padding: 16px;
   border-radius: 8px;
 
   background-color: ${({ theme }) => theme.colors.white};

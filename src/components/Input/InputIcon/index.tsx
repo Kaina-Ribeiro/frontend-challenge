@@ -3,7 +3,7 @@ import { FieldError } from 'react-hook-form';
 
 import Image from 'next/image';
 import { CustomInput, TextError, Wrapper, WrapperIcon } from './styles';
-import { HidePasswordIcon } from '../SignIn/styled';
+import { HidePasswordIcon } from '../../SignIn/styled';
 
 interface InputIconProps extends InputHTMLAttributes<HTMLInputElement> {
   errors?: FieldError;

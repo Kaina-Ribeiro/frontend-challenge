@@ -11,8 +11,8 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import InputIcon from '../InputIcon';
-import { TextError } from '../InputIcon/styles';
+import InputIcon from '../Input/InputIcon';
+import { TextError } from '../Input/InputIcon/styles';
 
 type RegisterProps = {
   email: string;

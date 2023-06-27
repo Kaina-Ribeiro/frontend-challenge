@@ -11,7 +11,7 @@ import emailIcon from '../../assets/input/emailIcon.svg';
 import hidePassword from '../../assets/input/hidePassword.svg';
 import { useState } from 'react';
 import { Button } from '../Button';
-import InputIcon from '../InputIcon';
+import InputIcon from '../Input/InputIcon';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';

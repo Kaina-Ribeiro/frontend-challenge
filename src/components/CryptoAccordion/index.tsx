@@ -27,7 +27,7 @@ const topCryptos = [
   { logo: logo4, cryptoName: 'Solana SOL', price: 'US$ 2.499,52', change: '+5,65%' },
 ];
 
-const CryptoDropdown = () => {
+const CryptoAccordion = () => {
   const [clicked, setClicked] = useState(-1);
 
   const handleToggle = (index: number) => {
@@ -78,4 +78,4 @@ const CryptoDropdown = () => {
   );
 };
 
-export default CryptoDropdown;
+export default CryptoAccordion;
